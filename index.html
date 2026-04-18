@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davish Talreja | Portfolio</title>
+    <meta name="description" content="Portfolio of Davish Talreja — B.Tech ECE student, developer, and AI enthusiast.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">D<span class="accent">.</span>T</a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Davish Talreja</h1>
+            <div class="hero-title-wrapper">
+                <span class="hero-title-prefix">I'm a </span>
+                <span id="typed-text" class="typed-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-desc">B.Tech Electronics &amp; Communication Engineering student passionate about building
+                innovative solutions with code and circuits.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Davish-code" aria-label="GitHub" target="blank"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/davish-talreja-ba1bb0230/" aria-label="LinkedIn" target="blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/DavishTalr53045" aria-label="Twitter" target="blank"><i
+                        class="fab fa-x-twitter"></i></a>
+                <a href="#" class="copy-email" aria-label="Copy Email" onclick="copyEmail(event)"><i
+                        class="fas fa-envelope"></i><span class="copy-tooltip">Copied!</span></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title anim-fade-up">About <span class="accent">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-image anim-fade-up">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.png" alt="Davish Talreja">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="about-text anim-fade-up">
+                    <h3>ECE Student &amp; Developer</h3>
+                    <p>I'm Davish Talreja, a B.Tech Electronics and Communication Engineering student with a deep
+                        passion for technology that spans both hardware and software. From designing digital circuits in
+                        Verilog to building intelligent AI models and full-stack web applications, I love turning ideas
+                        into reality.</p>
+                    <p>My interdisciplinary skill set allows me to bridge the gap between hardware design and software
+                        development, making me a versatile engineer ready to tackle complex challenges.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span><span class="accent">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span><span class="accent">+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span><span class="accent">+</span>
+                            <span class="stat-label">Years Coding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title anim-fade-up">My <span class="accent">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h4>Python</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
+                    <h4>Java</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <h4>Web Development</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h4>Artificial Intelligence</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                    <h4>Verilog / HDL</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>MATLAB</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h4>Circuit Design (KiCad)</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card anim-fade-up">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h4>Flutter</h4>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="65"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title anim-fade-up">My <span class="accent">Projects</span></h2>
+            <div class="project-filters anim-fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="hardware">Hardware</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card anim-fade-up" data-category="ai">
+                    <div class="project-img"><img src="assets/project-ai.png" alt="AI Chatbot"></div>
+                    <div class="project-info">
+                        <h4>AI-Powered Data Analytics UIDAI HACKATHON</h4>
+                        <p>An intelligent Assitance built with Python and AI Capabilities to identify the Anamoly of the
+                            given raw data</p>
+                        <div class="project-tags"><span>Python</span><span>AI</span><span>GPS</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Davish-code/UIDAI-HACKATHON" target="blank"><i
+                                    class="fab fa-github"></i> Code</a>
+                            <a href="assets/Project_Drishti_Final_Report.pdf" download><i class="fas fa-file-pdf"></i>
+                                Report</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card anim-fade-up" data-category="hardware">
+                    <div class="project-img"><img src="assets/project-verilog.png" alt="RISC Processor"></div>
+                    <div class="project-info">
+                        <h4>RISC-V Processor Design</h4>
+                        <p>A 32-bit RISC-V processor implemented in Verilog HDL with pipelining, hazard detection, and
+                            full ALU support.</p>
+                        <div class="project-tags"><span>Verilog</span><span>FPGA</span><span>Digital Design</span></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <!-- <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card anim-fade-up" data-category="web">
+                    <div class="project-img"><img src="assets/project-web.png" alt="Dashboard"></div>
+                    <div class="project-info">
+                        <h4>Analytics Dashboard</h4>
+                        <p>A responsive real-time analytics dashboard with dynamic charts, dark mode, and glassmorphic
+                            UI components.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>HTML/CSS</span><span>API</span></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <!-- <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card anim-fade-up" data-category="hardware">
+                    <div class="project-img"><img src="assets/project-iot.png" alt="IoT System"></div>
+                    <div class="project-info">
+                        <h4>IoT Smart Environment</h4>
+                        <p>An embedded IoT system using sensors and microcontrollers for real-time environmental
+                            monitoring with a web dashboard.</p>
+                        <div class="project-tags"><span>Python</span><span>IoT</span><span>Embedded</span></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <!-- <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title anim-fade-up">My <span class="accent">Journey</span></h2>
+            <div class="timeline">
+                <div class="timeline-item anim-fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 — Present</span>
+                        <h4>B.Tech ECE</h4>
+                        <p>Pursuing Electronics and Communication Engineering, focusing on VLSI design, signal
+                            processing, and embedded systems.</p>
+                    </div>
+                </div>
+                <div class="timeline-item anim-fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h4>AI &amp; Machine Learning</h4>
+                        <p>Dived deep into artificial intelligence — built projects with neural networks, NLP, and
+                            computer vision using Python.</p>
+                    </div>
+                </div>
+                <div class="timeline-item anim-fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h4>Web Development</h4>
+                        <p>Learned full-stack web development, building responsive websites and interactive web
+                            applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item anim-fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022</span>
+                        <h4>Started Coding Journey</h4>
+                        <p>Began programming with Python and JAVA, building a strong foundation in data structures and
+                            algorithms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title anim-fade-up">Get In <span class="accent">Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info anim-fade-up">
+                    <h3>Let's work together</h3>
+                    <p>Have a project in mind or want to collaborate? Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span>davishtalreja13@gmail.com</span>
+                        </div>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>India</span></div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/Davish-code" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/davish-talreja-ba1bb0230/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/DavishTalr53045" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="copy-email" aria-label="Copy Email" onclick="copyEmail(event)"><i
+                                class="fas fa-envelope"></i><span class="copy-tooltip">Copied!</span></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form anim-fade-up" action="https://api.web3forms.com/submit"
+                    method="POST">
+                    <input type="hidden" name="access_key" value="e2373c39-eba5-40ea-a633-f61a0f788607">
+                    <input type="hidden" name="subject" value="New message from Portfolio">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">D<span class="accent">.</span>T</a>
+                <p>&copy; 2026 Davish Talreja. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
